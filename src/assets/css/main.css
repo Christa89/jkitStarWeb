@@ -1,0 +1,887 @@
+
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+
+
+
+
+:focus {
+    outline: none;
+}
+      
+.jkx-page {
+    background-color: #032c54;
+    background-image: radial-gradient(#146AA5,#032c54);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ececec;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.jkx-toolbar {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0,0,0,0.1);
+    padding: 0 30px;
+}
+
+#date-time {
+    font-size: 21px;
+    font-weight: 300;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.battery {
+    background-image: url(../img/battery-status-full.svg);
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+
+.jkx-page-content {
+    min-height: calc( 100vh - 100px );
+}
+
+.jkx-content-top {
+    height: calc( 200vh/3 - 200px/3 );
+    padding: 0 100px;
+}
+
+.jkx-content-bottom {
+    height: calc( 100vh/3 - 100px/3 );
+}
+
+.jkx-title1 {
+    font-size: 70px;
+    width: 100%;
+    text-align: center;
+}
+
+.jkx-title2 {
+    font-size: 45px;
+    width: 100%;
+    text-align: center;
+}
+.jkx-btn {
+    background-color: rgba(116, 195, 251, 0.3);
+    border: 5px solid #ececec;    
+    min-width: 200px;
+    font-size: 25px;
+    color: #ececec;
+    border-radius: 15px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-content: stretch;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.jkx-btn > a {
+    padding: 15px 10px;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.jkx-robot-msg .jkx-btn {
+    border: 5px solid #083a64;
+    color: #083a64;
+}
+
+.jkx-robot-msg .jkx-btn-green {
+    background-color: rgba(47, 216, 36, 0.6);
+    border: 5px solid #2b6408;
+    color: #2b6408;
+}
+
+.jkx-loader,.jkx-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.jkx-loader .jkx-loader-bulb {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #083a64;
+    margin: 0 15px;
+    border-radius: 50%;
+}
+
+.jkx-loader .jkx-loader-bulb:nth-child(1){
+    animation: bulb 2s linear 0s infinite;
+}
+
+.jkx-loader .jkx-loader-bulb:nth-child(2){
+    animation: bulb 2s linear 0.33s infinite;
+}
+
+.jkx-loader .jkx-loader-bulb:nth-child(3){
+    animation: bulb 2s linear 0.66s infinite;
+}
+
+.jkx-rating .jkx-rate-star {
+    background-image: url(../img/star-empty.svg);
+    width: 75px;
+    height: 75px;
+    background-size: 75px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    margin: 0 15px;
+}
+
+.jkx-rating .jkx-rate-star.selected {
+    background-image: url(../img/star-selected.svg);
+}
+
+.jkx-btn-settings {    
+    position: relative;
+    background-image: url(../img/settings.svg);
+    background-size: 120px;
+    width: 120px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    margin: 50px;
+}
+
+.jkx-btn-settings > a {
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.jkx-btn-go {    
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border: 5px solid #ececec;
+    background-color: rgba(47, 216, 36, 0.6);
+    margin: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.jkx-btn-go > a {
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    border-radius: 50%;
+    text-decoration: none;    
+    padding-top: 8px;
+    color: #ffffff;
+}
+
+.jkx-robot-eye {
+    width: 150px;
+    height: 150px;
+    margin: 0 50px;
+}
+
+.jkx-robot-msg {
+    position: relative;
+    background-color: #ececec;
+    padding: 30px 75px;
+    border-radius: 25px;
+    color: #083a64;
+    width: 100%;
+}
+
+.jkx-robot-msg:after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: calc( 50% - 50px );
+    left: calc( 50% - 50px );
+    border-top: 50px solid #ececec;
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+}
+
+.jkx-numpad button {
+    padding: 15px;
+    margin: 10px 20px;
+    width: 80px;
+    height: 80px;
+    border: 5px solid #ececec;
+    background-color: rgba(116, 195, 251, 0.3);
+    color: #ececec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 50%;
+    font-size: 34px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.jkx-alphanumericpad button {
+    padding: 5px;
+    margin: 5px;
+    width: 65px;
+    height: 65px;
+    border: 5px solid #ececec;
+    background-color: rgba(116, 195, 251, 0.3);
+    color: #ececec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.jkx-alphanumericpad button.spacebar {
+    border-radius: 15px;
+    width: 400px;
+}
+
+.jkx-alphanumericpad button.backspace {
+    border-radius: 15px;
+    width: 100px;
+    background-image: url(../img/long-left-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 90px 55px;
+}
+
+#jkx-input {
+    padding: 10px 15px;
+    height: 60px;
+    font-size: 50px;
+    color: #083a64;
+    width: 150px;
+    text-align: center;
+    border-radius: 15px;
+    border: 5px solid #083a64;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.jkx-load-cart {
+    /* background-image: url(../img/delivery-cart.svg); */
+    height: 300px;
+    width: 300px;
+    /* background-repeat: no-repeat; */
+}
+
+@keyframes bulb {
+    0% { background-color: #ececec; }
+    5% { background-color: #ececec; }
+    25% { background-color: #1367a2; }
+    50% { background-color: #083a64; }
+    75% { background-color: #1367a2; }
+    95% { background-color: #ececec; }
+    100% { background-color: #ececec; }
+}
+
+/* ==========================================================================
+   jkx theme styles
+   ========================================================================== */
+
+.bgcolor-green {
+    background-color: rgba(47, 216, 36, 0.6) !important; 
+}
+
+.bgcolor-blue {
+    background-color: rgba(116, 195, 251, 0.3) !important; 
+}
+
+ /* ==========================================================================
+   jkx flex styles
+   ========================================================================== */
+
+.f-d-column {
+    display: flex;
+    flex-direction: column;    
+    box-sizing: border-box;    
+}
+
+.f-d-row {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+.a-d1-start {
+    align-content: stretch;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.a-d1-center {
+    align-content: stretch;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.a-d1-end {
+    align-content: stretch;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.a-d1-space-around {
+    align-content: stretch;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.a-d1-space-between {
+    align-content: stretch;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.a-d1-space-evenly {
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.a-d2-start {
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.a-d2-center {
+    align-content: center;
+    align-items: center;
+}
+
+.a-d2-end {
+    align-content: flex-end;
+    align-items: flex-end;
+}
+
+.a-d2-stretch {
+    align-content: stretch;
+    align-items: stretch;
+    max-height: 100%;
+}
+
+.f-25 {
+    flex: 1 1 25%;
+    box-sizing: border-box;
+    max-width: 25%;
+}
+.f-50 {
+    flex: 1 1 50%;
+    box-sizing: border-box;
+    max-width: 50%;
+}
+
+.f-75 {
+    flex: 1 1 75%;
+    box-sizing: border-box;
+    max-width: 75%;
+}
+
+.f-100 {
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.f-33 {
+    flex: 1 1 33.33%;
+    box-sizing: border-box;
+    max-width: 33.33%;
+}
+
+.f-66 {
+    flex: 1 1 66.66%;
+    box-sizing: border-box;
+    max-width: 66.66%;
+}
+
+ /* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+   /* common margins paddings etc... */
+.m-l-0 {
+    margin-left: 0 !important;
+}
+  
+.m-r-0 {
+    margin-right: 0 !important;
+}
+  
+.m-t-0 {
+    margin-top: 0 !important;
+}
+  
+.m-b-0 {
+    margin-bottom: 0 !important;
+}
+  
+.m-y-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+  
+.m-x-0 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+  
+.m-l-5 {
+    margin-left: 5px !important;
+}
+  
+.m-r-5 {
+    margin-right: 5px !important;
+}
+  
+.m-t-5 {
+    margin-top: 5px !important;
+}
+  
+.m-b-5 {
+    margin-bottom: 5px !important;
+}
+  
+.m-y-5 {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+  
+.m-x-5 {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+}
+  
+.m-l-15 {
+    margin-left: 15px !important;
+}
+  
+.m-r-15 {
+    margin-right: 15px !important;
+}
+  
+.m-t-15 {
+    margin-top: 15px !important;
+}
+  
+.m-b-15 {
+    margin-bottom: 15px !important;
+}
+  
+.m-y-15 {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+  
+.m-x-15 {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+}
+  
+.m-t-19 {
+    margin-top: 19px !important;
+}
+  
+.m-b-19 {
+    margin-bottom: 19px !important;
+}
+
+.m-b-30 {
+    margin-bottom: 30px !important;
+}
+  
+.m-0 {
+    margin: 0 !important;
+}
+  
+.m-5 {
+    margin: 5px !important;
+}
+  
+.p-l-0 {
+    padding-left: 0 !important;
+}
+  
+.p-r-0 {
+    padding-right: 0 !important;
+}
+  
+.p-t-0 {
+    padding-top: 0 !important;
+}
+  
+.p-b-0 {
+    padding-bottom: 0 !important;
+}
+  
+.p-l-5 {
+    padding-left: 5px !important;
+}
+  
+.p-r-5 {
+    padding-right: 5px !important;
+}
+  
+.p-t-5 {
+    padding-top: 5px !important;
+}
+  
+.p-b-5 {
+    padding-bottom: 5px !important;
+}
+  
+.p-y-5 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+  
+.p-x-5 {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+  
+.p-l-15 {
+    padding-left: 15px !important;
+}
+  
+.p-r-15 {
+    padding-right: 15px !important;
+}
+  
+.p-t-15 {
+    padding-top: 15px !important;
+}
+  
+.p-b-15 {
+    padding-bottom: 15px !important;
+}
+  
+.p-y-15 {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+  
+.p-x-15 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+.p-y-30 {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+  
+.p-x-30 {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+  
+.p-0 {
+    padding: 0 !important;
+}
+  
+.p-5 {
+    padding: 5px !important;
+}
+
+.p-15 {
+    padding: 15px !important;
+}
+
+.p-30 {
+    padding: 30px !important;
+}
+  
+.txt-center {
+    text-align: center !important;
+}
+  
+.txt-right {
+    text-align: right !important;
+}
+  
+.txt-left {
+    text-align: left !important;
+}
+  
+.h-100pcnt {
+    height: 100% !important;
+}
+  
+.w-100pcnt {
+    width: 100% !important;
+}
+
+.w-auto {
+    width: auto !important;
+}
+  
+.f-w-300 {
+    font-weight: 300 !important;
+}
+  
+.f-w-500 {
+    font-weight: 500 !important;
+}
+  
+.f-w-700 {
+    font-weight: 700 !important;
+}
+
+.f-w-900 {
+    font-weight: 900 !important;
+}
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
+/*
+* Extends the .visuallyhidden class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+ 
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+   @media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+ 
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+   @media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+

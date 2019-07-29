@@ -1,0 +1,12 @@
+<div class="jkx-page-content f-d-row f-wrap" *ngIf="showHomeCompo">
+    <div class="jkx-content-top f-d-column a-d1-center a-d2-center f-100">
+        <div class="jkx-title1">Hello !</div>
+        <div class="jkx-title1 f-w-300">I'm ready for a delivery</div>
+    </div>
+    <div class="jkx-content-bottom f-d-row f-100 a-d1-space-between a-d2-center">            
+        <button class="jkx-btn-settings"><a href="#"></a></button><button class="jkx-btn-go" (click)="goToNextPage($event)"><a class="f-d-column a-d1-center" href="#"><span>LET'S</span><span>GO</span></a></button>
+    </div>       
+  </div>
+<app-rbt-delivery-info *ngIf="showDeliveryInfoCompo" (goToHomePage)="LoadHome($event)"></app-rbt-delivery-info>
+
+<!--  -->

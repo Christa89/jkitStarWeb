@@ -1,0 +1,53 @@
+
+ 
+ <div *ngIf="showRecepNameCompo">
+  <meta name="page-number" content="2">
+  <meta name="display-limit" content="5">
+ 
+ <div class="jkx-page-content f-d-row f-wrap">
+     <div class="jkx-content-top p-0 f-d-row f-wrap a-d2-end f-100">
+         <div class="f-w-300 txt-center p-x-30 m-b-30 f-d-row a-d1-space-between a-d2-center f-100">
+           <div class="jkx-title2 txt-left f-50">Enter Recipient Name</div>
+           <div class="f-d-row a-d1-center a-d2-center f-50">                
+             <input id="jkx-input" class="w-100pcnt" maxlength="15" type="text" readonly  #rName/>
+           </div>
+         </div>
+         <div class="jkx-alphanumericpad p-x-30 f-d-row f-wrap a-d2-center f-100">
+             <div class="f-100 f-d-row a-d1-center a-d2-center ">
+                 <div><button value="Q">Q</button></div><div><button value="W">W</button></div><div><button value="E">E</button></div>
+                 <div><button value="R">R</button></div><div><button value="T">T</button></div><div><button value="Y">Y</button></div>
+                 <div><button value="U">U</button></div><div><button value="I">I</button></div><div><button value="O">O</button></div>
+                 <div><button value="P">P</button></div>
+             </div>
+             <div class="f-100 f-d-row a-d1-center a-d2-center ">
+                 <div><button value="A">A</button></div><div><button value="S">S</button></div><div><button value="D">D</button></div>
+                 <div><button value="F">F</button></div><div><button value="G">G</button></div><div><button value="H">H</button></div>
+                 <div><button value="J">J</button></div><div><button value="K">K</button></div><div><button value="L">L</button></div>
+             </div>
+             <div class="f-100 f-d-row a-d1-center a-d2-center ">
+                 <div><button value="Z">Z</button></div><div><button value="X">X</button></div><div><button value="C">C</button></div>
+                 <div><button value="V">V</button></div><div><button value="B">B</button></div><div><button value="N">N</button></div>
+                 <div><button value="M">M</button></div>
+             </div>
+             <div class="f-100 f-d-row a-d1-center a-d2-center ">
+                 <button class="spacebar" value=" ">&nbsp;</button>
+                 <button class="backspace"></button>
+             </div>               
+         </div>
+     </div>
+     <div class="jkx-content-bottom f-d-row f-100">      
+         <div class="p-x-30 f-d-row a-d1-space-between a-d2-center f-50"><button class="jkx-btn" (click)="goToPreviousPage()"><a href="#">Back</a></button><button class="jkx-btn" onclick="clearDisplay()"><a>Clear</a></button></div> 
+         <div class="f-d-row a-d1-end a-d2-center f-50"><button class="jkx-btn-go hidden" (click)="goToNextPage(rName.value)"><a class="f-d-column a-d1-center" href="#"><span>NEXT</span></a></button></div> 
+     </div>        
+   </div>
+ 
+   <script>
+     function setRecipientName() {      
+       localStorage.setItem("recipientName",document.getElementById('jkx-input').value);
+     }
+   </script>
+ </div>
+
+
+  <app-rbt-contn-no *ngIf="showContactNoCompo" (goToPrePage)="LoadPage($event)" 
+  [receptionstName]="strReceptionstName" [roomNumber] ="roomNumber"></app-rbt-contn-no>

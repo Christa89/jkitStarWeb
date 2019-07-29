@@ -1,0 +1,36 @@
+
+<div *ngIf="showPassCodeCompo">
+
+        <meta name="display-limit" content="4">
+        <div class="jkx-page-content f-d-row f-wrap">
+            <div class="jkx-content-top p-0 f-d-row f-100">
+                <div class="f-w-300 txt-center p-x-30 f-d-column a-d1-center a-d2-center f-50">
+                  <div class="jkx-title2 m-b-30">Hi <span id="jkx-recipient-name"></span> !</div>
+                  <div class="jkx-title2 m-b-30">Enter Passcode</div>
+                  <input id="jkx-input" type="text" maxlength="3" readonly #OTPCode/>
+                </div>
+                <div class="jkx-numpad p-x-30 f-d-row f-wrap a-d2-center f-50">
+                    <div class="f-100 f-d-row a-d1-center a-d2-center ">
+                        <div><button value="1">1</button></div><div><button value="2">2</button></div><div><button value="3">3</button></div>
+                    </div>
+                    <div class="f-100 f-d-row a-d1-center a-d2-center ">
+                        <div><button value="4">4</button></div><div><button value="5">5</button></div><div><button value="6">6</button></div>
+                    </div>
+                    <div class="f-100 f-d-row a-d1-center a-d2-center ">
+                        <div><button value="7">7</button></div><div><button value="8">8</button></div><div><button value="9">9</button></div>
+                    </div>
+                    <div class="f-100 f-d-row a-d1-center a-d2-center ">
+                        <div>&nbsp;</div><div><button value="0">0</button></div><div>&nbsp;</div>
+                    </div>                  
+                </div>
+            </div>
+            <div class="jkx-content-bottom f-d-row f-100">      
+                <div class="p-x-30 f-d-row a-d1-space-around a-d2-center f-50"><button class="jkx-btn"><a href="#">Front Desk</a></button><button class="jkx-btn" onclick="clearDisplay()"><a>Clear</a></button></div> 
+                <div class="f-d-row a-d1-end a-d2-center f-50"><button class="jkx-btn-go hidden" (click)="goToNextPage(OTPCode.value)"><a class="f-d-column a-d1-center" href="#"><span>LET'S</span><span>GO</span></a></button></div> 
+            </div>        
+          </div>
+
+</div>
+
+
+  <app-rbt-clarify-delivery *ngIf="showClarifyDeliveryCompo" [orderDetails]="_orderDetails"></app-rbt-clarify-delivery>

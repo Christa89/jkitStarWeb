@@ -1,0 +1,94 @@
+
+<div *ngIf="showLoadDelivery">
+
+    <style>
+        #box {
+          animation: test 1.5s linear infinite;
+        }
+    
+        @keyframes test {
+          20% {
+            transform: translateY(-3px);
+          }
+          30% {
+            transform: translateY(-3px) rotate(2deg);
+            transform-origin: 35px 35px;
+    
+          }
+          40% {
+            transform: translateY(-3px) rotate(-2deg);
+            transform-origin: 35px 35px;
+          }
+          50% {
+            transform: translateY(-3px) rotate(2deg);
+            transform-origin: 35px 35px;
+          }
+          60% {
+            transform: translateY(-3px) rotate(-2deg);
+            transform-origin: 35px 35px;
+          }
+          70% {
+            transform: translateY(-3px) rotate(0deg);
+            transform-origin: 35px 35px;
+          }
+          100% {
+            transform: translateY(0px);
+          }
+          
+        }
+    </style>
+    
+    <div class="jkx-page-content f-d-row f-wrap">
+        <div class="jkx-content-top p-0 f-d-row f-100">
+            <div class="f-w-300 txt-center p-x-30 f-d-column a-d1-center a-d2-center f-50">
+              <div class="jkx-title2 f-w-300 m-b-30">Please Load Items for</div>
+              <div class="jkx-title2 f-w-300 m-b-30">Room No.</div>
+              <div id="jkx-room-no" class="jkx-title1">{{roomNumber}}</div>
+            </div> 
+            <div class="f-d-row a-d1-center a-d2-center f-50">
+              <div class="jkx-load-cart">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 59 59" style="enable-background:new 0 0 59 59;" xml:space="preserve">
+                <g>
+                  
+                  
+                  <circle style="fill:#002746;" cx="19" cy="51.5" r="4"/>
+                  <circle style="fill:#002746;" cx="49" cy="51.5" r="4"/>
+                  <circle style="fill:#ffffff;" cx="3" cy="6.5" r="3"/>
+                  <path style="fill:#ffffff;" d="M9,7.5H4c-0.553,0-1-0.447-1-1s0.447-1,1-1h5c0.553,0,1,0.447,1,1S9.553,7.5,9,7.5z"/>
+                  <path style="fill:#ffffff;" d="M9,47.5c-0.553,0-1-0.447-1-1v-40c0-0.553,0.447-1,1-1s1,0.447,1,1v40C10,47.053,9.553,47.5,9,47.5z"/>
+                  <path style="fill:#ffffff;" d="M58,47.5H9c-0.553,0-1-0.447-1-1s0.447-1,1-1h49c0.553,0,1,0.447,1,1S58.553,47.5,58,47.5z"/>
+                  <g id="box">
+                    <rect x="27" y="21.5" style="fill:#8F6127;" width="18" height="18"/>
+                    <path style="fill:#70491E;" d="M40,42.069h-8V18.5h8V42.069z M34,40.069h4V20.5h-4V40.069z"/>
+                    <rect x="27" y="39.5" style="fill:#CA965A;" width="24" height="6"/>
+                    <rect x="21" y="21.5" style="fill:#AD7E4E;" width="6" height="24"/>
+                    <rect x="21" y="15.5" style="fill:#CA965A;" width="24" height="6"/>
+                    <rect x="45" y="15.5" style="fill:#AD7E4E;" width="6" height="24"/>                  
+                    <path style="fill:#CA965A;" d="M49,37.5c0-0.553-0.447-1-1-1s-1,0.447-1,1v2h2V37.5z"/>
+                    <path style="fill:#AD7E4E;" d="M43,17.5c-0.553,0-1,0.447-1,1s0.447,1,1,1h2v-2H43z"/>
+                    <path style="fill:#AD7E4E;" d="M29,43.5c0.553,0,1-0.447,1-1s-0.447-1-1-1h-2v2H29z"/>
+                    <path style="fill:#CA965A;" d="M23,23.5c0,0.553,0.447,1,1,1s1-0.447,1-1v-2h-2V23.5z"/>
+                  </g>
+                  </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                </svg>
+              </div>
+            </div>           
+        </div>
+        <div class="jkx-content-bottom f-d-row f-100">      
+            <div class="p-x-30 f-d-row a-d1-space-between a-d2-center f-50"><button class="jkx-btn" (click)="goToPreviousPage()"><a href="#">Back</a></button></div> 
+            <div class="f-d-row a-d1-end a-d2-center f-50"><button class="jkx-btn-go" (click)="goToNextPage()"><a class="f-d-column a-d1-center" href="#"><span>LET'S</span><span>GO</span></a></button></div> 
+        </div>        
+      </div>
+    
+     <!--  <iframe src="audio/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+      <audio id="chime-sound" autoplay loop>
+        <source src="audio/store-door-chime-low-vol.mp3" type="audio/mp3">
+      </audio> -->
+      <script>document.getElementById('jkx-room-no').innerText = localStorage.getItem('roomNo');</script>
+
+</div>
+
+
+
+  <app-rbt-run-delivery *ngIf="showRunDelivery" [orderDetails]="orderDetails"></app-rbt-run-delivery>

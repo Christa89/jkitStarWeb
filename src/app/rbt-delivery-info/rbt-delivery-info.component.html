@@ -1,0 +1,37 @@
+<meta name="page-number" content="3">
+<meta name="display-limit" content="3">
+
+<div class="jkx-page-content f-d-row f-wrap" *ngIf="showDeliveryInfoCompo">
+    <div class="jkx-content-top p-0 f-d-row f-100">
+        <div class="p-x-30 f-d-column a-d1-center a-d2-center f-50">
+            <div class="jkx-title2 f-w-300 txt-center m-b-30">Please Enter Delivery Room No.</div>
+            <input id="jkx-input" type="text" maxlength="3" readonly  #roomNo/>
+        </div>            
+        <div class="jkx-numpad p-x-30 f-d-row f-wrap a-d2-center f-50">
+          <div class="f-100 f-d-row a-d1-center a-d2-center ">
+              <div><button value="1">1</button></div><div><button value="2">2</button></div><div><button value="3">3</button></div>
+          </div>
+          <div class="f-100 f-d-row a-d1-center a-d2-center ">
+              <div><button value="4">4</button></div><div><button value="5">5</button></div><div><button value="6">6</button></div>
+          </div>
+          <div class="f-100 f-d-row a-d1-center a-d2-center ">
+              <div><button value="7">7</button></div><div><button value="8">8</button></div><div><button value="9">9</button></div>
+          </div>
+          <div class="f-100 f-d-row a-d1-center a-d2-center ">
+              <div><button class="invisible" value="" disabled></button></div><div><button value="0">0</button></div><div><button class="invisible" value="" disabled></button></div>
+          </div>              
+        </div>
+    </div>
+    <div class="jkx-content-bottom f-d-row f-100">      
+        <div class="p-x-30 f-d-row a-d1-space-between a-d2-center f-50"><button class="jkx-btn" (click)="goToPreviousPage()"><a href="#">Back</a></button><button class="jkx-btn" (click)="clearText()"><a>Clear</a></button></div> 
+        <div class="f-d-row a-d1-end a-d2-center f-50"><button class="jkx-btn-go hidden" (click)="goToNextPage(roomNo.value)">
+            <a class="f-d-column a-d1-center" href="#"><span>NEXT</span></a></button></div> 
+    </div>       
+  </div>
+  <style>
+    .jkx-title {
+      font-size: 60px;
+    }
+  </style>
+
+<app-rbt-recip-name *ngIf="showRecepName" (goToPrePage)="LoadPage($event)" [roomNumber]="strRoomNo"></app-rbt-recip-name>
